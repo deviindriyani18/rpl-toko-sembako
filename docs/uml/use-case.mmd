@@ -1,0 +1,25 @@
+flowchart LR
+    Kasir[["Aktor: Kasir"]]
+    Pemilik[["Aktor: Pemilik"]]
+
+    subgraph S["Sistem Toko Sembako Berkah Sampit"]
+        direction TB
+        %% Use Cases untuk Kasir
+        UC1(["(UC-01) Pencatatan Transaksi<br/>Penjualan"])
+        
+        %% Use Cases untuk Pemilik
+        UC2(["(UC-02) Login Pemilik"])
+        UC3(["(UC-03) Lihat Laporan<br/>Keuangan Harian"])
+        UC4(["(UC-04) Manajemen Produk<br/>(Tambah/Ubah Harga)"])
+        
+        %% Relationship Include (Opsional jika ingin ditampilkan)
+        %% UC4 -.->|include| UC2
+        %% UC3 -.->|include| UC2
+    end
+
+    %% Hubungan Aktor ke Use Cases
+    Kasir --- UC1
+    Pemilik --- UC1
+    Pemilik --- UC2
+    Pemilik --- UC3
+    Pemilik --- UC4
