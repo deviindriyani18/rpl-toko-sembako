@@ -1,0 +1,9 @@
+flowchart TD
+    A((Mulai)) --> B[Kasir membuka halaman kasir]
+    B --> C[Kasir memilih produk dan mengisi jumlah]
+    C --> D{Stok cukup?}
+    D -- Tidak --> E[Sistem menampilkan pesan stok tidak cukup]
+    E --> C
+    D -- Ya --> F[Sistem menghitung subtotal dan diskon 10%]
+    F --> G[Sistem menampilkan total bayar dan ringkasan]
+    G --> H((Selesai))

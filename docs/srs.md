@@ -62,3 +62,10 @@ Satu laptop lokal, sistem operasi Windows, browser modern, dan tanpa koneksi int
 
 ## Riwayat konfirmasi klien
 - [cite: Tanggal]: Pemilik menyetujui prioritas fitur dan batasan operasional (Langkah 14-15).
+## Pemodelan Sistem (UML)
+Tautan berkas pemodelan tersimpan di direktori `docs/uml/`:
+- **Use Case Diagram:** [use-case.mmd](./uml/use-case.mmd), [use-case.png](./uml/use-case.png)
+- **Skenario Use Case:** [skenario-use-case.md](./uml/skenario-use-case.md)
+- **Activity Diagram 1:** [activity-01-pencatatan-transaksi.mmd](./uml/activity-01-pencatatan-transaksi.mmd), [activity-01-pencatatan-transaksi.png](./uml/activity-01-pencatatan-transaksi.png)
+- **Activity Diagram 2:** [activity-02-manajemen-produk.mmd](./uml/activity-02-manajemen-produk.mmd), [activity-02-manajemen-produk.png](./uml/activity-02-manajemen-produk.png)
+- **Activity Diagram 3:** [activity-03-lihat-laporan.mmd](./uml/activity-03-lihat-laporan.mmd), [activity-03-lihat-laporan.png](./uml/activity-03-lihat-laporan.png)

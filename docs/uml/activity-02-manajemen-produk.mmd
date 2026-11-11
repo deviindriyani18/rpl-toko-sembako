@@ -1,0 +1,9 @@
+flowchart TD
+    A((Mulai)) --> B[Pemilik membuka menu manajemen produk]
+    B --> C{Pilih aksi?}
+    C --|Tambah Produk| D[Pemilik mengisi nama dan harga baru]
+    D --> E[Sistem menyimpan produk ke SQLite]
+    C --|Ubah Harga| F[Pemilik memilih produk dan memasukkan harga baru]
+    F --> G[Sistem memperbarui harga di basis data]
+    E --> H((Selesai))
+    G --> H
