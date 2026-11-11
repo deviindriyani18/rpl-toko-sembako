@@ -5,7 +5,7 @@
     <title>Kasir Toko Sembako</title>
 </head>
 <body>
-    <h1>🏪 Toko Sembako Berkah Sampit</h1>
+    <h1>Toko Sembako Berkah Sampit</h1>
     <p>{{ salam }}. Waktu server: {{ waktu }}</p>
     
     <form method="post">
@@ -29,7 +29,11 @@
         <h3>Struk Belanja:</h3>
         <p>Pembeli: <b>{{ hasil.nama }}</b></p>
         <p>Barang: {{ hasil.barang }} ({{ hasil.jumlah }} pcs)</p>
-        <p style="color: green;">Total Bayar: Rp {{ hasil.total }}</p>
+        <p>Subtotal: Rp {{ hasil.subtotal }}</p>
+        {% if hasil.diskon > 0 %}
+            <p style="color: red;">Diskon (10%): -Rp {{ hasil.diskon }}</p>
+        {% endif %}
+        <p style="color: green; font-size: 1.2em;"><b>Total Bayar: Rp {{ hasil.total }}</b></p>
     {% endif %}
 </body>
 </html>
