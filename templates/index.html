@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Kasir Toko Sembako</title>
+</head>
+<body>
+    <h1>🏪 Toko Sembako Berkah Sampit</h1>
+    <p>{{ salam }}. Waktu server: {{ waktu }}</p>
+    
+    <form method="post">
+        <label for="nama">Nama Pembeli:</label><br>
+        <input type="text" id="nama" name="nama" required maxlength="50"><br><br>
+
+        <label for="barang">Pilih Sembako:</label><br>
+        <select id="barang" name="barang">
+            <option value="Minyak Goreng 1L">Minyak Goreng 1L (Rp 15.000)</option>
+            <option value="Gula Pasir 1Kg">Gula Pasir 1Kg (Rp 14.000)</option>
+        </select><br><br>
+
+        <label for="jumlah">Jumlah Beli:</label><br>
+        <input type="number" id="jumlah" name="jumlah" min="1" required><br><br>
+
+        <button type="submit">Hitung Belanjaan</button>
+    </form>
+
+    {% if hasil %}
+        <hr>
+        <h3>Struk Belanja:</h3>
+        <p>Pembeli: <b>{{ hasil.nama }}</b></p>
+        <p>Barang: {{ hasil.barang }} ({{ hasil.jumlah }} pcs)</p>
+        <p style="color: green;">Total Bayar: Rp {{ hasil.total }}</p>
+    {% endif %}
+</body>
+</html>
